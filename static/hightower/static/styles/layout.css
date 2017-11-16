@@ -1,0 +1,31 @@
+.col-1, .col-1b, .col-2, .col-3, .col-4, .col-5, .col-6 {float:left;}
+.container {width:100%; overflow:hidden;}
+.resultlist {width:100%; height:602px;overflow:auto;}
+
+.moduleContent {width:439px; overflow:hidden; height:100%; 
+				font-family: Arial, Helvetica, sans-serif;
+				font-size:0.8123em;
+				line-height:1.385em;
+				color:#cccccc;
+}
+.moduleContent2 {width:930px; overflow:hidden; 
+				font-family: Arial, Helvetica, sans-serif;
+				font-size:0.8123em;
+				line-height:1.385em;
+				color:#cccccc;
+}
+
+#menu { height:134px; text-align:center;}
+#menu .indent {width:990px; margin:0 auto; text-align:left; padding:11px 0 0;}
+#main { width:990px; margin:0 auto; text-align:left; }
+#header {height:390px; width:100%; overflow:hidden; }
+#footer { height:39px; text-align:center;}
+/* ============================= Search(INDEX) ===========================*/
+#search {background-image:url(hightower/static/images/bgstrip.png);}
+#search .col-1 { width:479px; height:550px;}
+#search .col-2 { width:479px; height:100%;}
+/* ============================= Detail(INDEX) ===========================*/
+#detail .col-1 { width:969px; height:550px;}
+
+
+

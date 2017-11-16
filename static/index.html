@@ -1,0 +1,405 @@
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link type="text/css" href='hightower/static/styles/smoothness/jquery-ui-1.7.1.custom.css'        rel="stylesheet"/>
+        <link href="hightower/static/styles/style.css" rel="stylesheet" type="text/css"/>
+        <link href="hightower/static/styles/layout.css" rel="stylesheet" type="text/css"/>
+        <link href="hightower/static/styles/pagination.css" rel="stylesheet" type="text/css"/>
+        <link href="hightower/static/styles/_style.css" rel="stylesheet" type="text/css"/>
+        <link href="hightower/static/styles/jqModal.css" rel="stylesheet" type="text/css"/>
+
+
+
+
+        <style type="text/css">
+            .jqmOverlay { background-color: #FFF; }
+            .jqmWindow {
+                background: #888888 url(hightower/static/images/modal_bckgrn.gif) left top repeat-x;
+                color: #000;
+                border: 1px solid #888888;
+                padding: 0 0px 50px;
+            }
+
+            button.jqmClose {
+                background: none;
+                border: 0px solid #EAEAEB;
+                color: #000;
+                clear: right;
+                float: right;
+                padding: 0;
+                margin-top:5px;
+                margin-left:5px;
+                cursor: pointer;
+                font-size: 8px;
+
+                letter-spacing: 1px;
+            }
+
+            button.jqmClose:hover, button.jqmClose:active {
+                color: #FFF;
+                border: 0px solid #FFF;
+            }
+
+            #jqmTitle {
+                background: transparent;
+                color: black;
+                text-transform: capitalize;
+                height: 50px;
+                padding: 0px 5px 0 10px;
+
+            }
+
+            #jqmContent {
+                width: 100%;
+                height: 100%;
+                display: block;
+                clear: both;
+                margin: 0;
+                margin-top: 0px;
+                background: #e8e8e8;
+                border: 1px solid #888888;
+            }
+        </style>
+
+
+        <style type="text/css">
+            /* --------
+            The CSS rules offered here are just an example, you may use them as a base.
+            Shape your 'expand/collapse' content so that it meets the style of your site.
+           --------- */
+            * {
+                margin: 0;
+                padding: 0
+            }
+
+            /* --- Page Structure  --- */
+
+            .contentres {
+                max-width: 50em;
+                width: 70%;
+                margin: 0 auto;
+                padding-bottom: 2px;
+                overflow: hidden;
+            }
+
+            .demo {
+                margin: 0;
+                padding: 0.5em 0.5em 0.25em;
+                border: 0px solid #ccc;
+                position: relative
+            }
+
+            .collapse {
+                margin: 0;
+                padding: 0px 0px 0px 0px;
+                border: 1px solid #ccc;
+
+            }
+
+            .collapse p {
+                padding: 0 5px 1em
+            }
+
+            #switch, .switch {
+                margin-bottom: 1px;
+                text-align: right
+            }
+
+            /* --- Headings  --- */
+
+            h2 {
+                font-size: 1em
+            }
+
+            .expand {
+                padding-bottom: .75em
+            }
+
+            .expand a {
+                display: block;
+                padding: 3px 5px
+            }
+
+            .expand a:link, .expand a:visited {
+                border-width: 1px;
+                background-image: url(hightower/static/images/arrow-down.gif);
+                background-repeat: no-repeat;
+                background-position: 78% 50%;
+            }
+
+            .expand a:hover, .expand a:active, .expand a:focus {
+                text-decoration: underline
+            }
+
+            .expand a.open:link, .expand a.open:visited {
+                border-style: solid;
+                background: #666666 url(hightower/static/images/arrow-up.gif) no-repeat 98% 50%
+            }
+
+            .osX .jScrollPaneTrack {
+                background: url(hightower/static/images/osx_track.gif) repeat-y;
+            }
+
+            .osX .jScrollPaneDrag {
+                background: url(hightower/static/images/osx_drag_middle.gif) repeat-y;
+            }
+
+            .osX .jScrollPaneDragTop {
+                background: url(hightower/static/images/osx_drag_top.gif) no-repeat;
+                height: 6px;
+            }
+
+            .osX .jScrollPaneDragBottom {
+                background: url(hightower/static/images/osx_drag_bottom.gif) no-repeat;
+                height: 7px;
+            }
+
+            .osX a.jScrollArrowUp {
+                height: 24px;
+                background: url(hightower/static/images/osx_arrow_up.png) no-repeat 0 -30px;
+            }
+
+            .osX a.jScrollArrowUp:hover {
+                background-position: 0 0;
+            }
+
+            .osX a.jScrollArrowDown {
+                height: 24px;
+                background: url(hightower/static/images/osx_arrow_down.png) no-repeat 0 -30px;
+            }
+
+            .osX a.jScrollArrowDown:hover {
+                background-position: 0 0;
+            }
+
+            /* IE SPECIFIC HACKED STYLES */
+            * html .osX .jScrollPaneDragBottom {
+                bottom: -1px;
+            }
+
+            /* /IE SPECIFIC HACKED STYLES */
+
+        </style>
+
+
+        <script type="text/javascript" src="hightower/static/js/jquery-1.3.2.js"></script>
+        <script type="text/javascript" src="hightower/static/js/jqModal.js"></script>
+        <script type="text/javascript" src="hightower/static/js/expand.js"></script>
+        <script type="text/javascript" src="hightower/static/js/jquery/jquery.pagination.js"></script>
+        <script type="text/javascript" src="hightower/static/js/ui.datepicker.js"></script>
+        <script type="text/javascript" src="hightower/static/js/jquery/jquery.mousewheel.js"></script>
+        <script type="text/javascript" src="hightower/static/js/jquery/jScrollPane.js"></script> 
+        <script type="text/javascript" src="hightower/static/js/jquery/selectboxfactory-2.2.1.js"></script>
+		<script type="text/javascript" src="hightower/static/js/searchjson.js"></script>
+		<script type="text/javascript" src="hightower/static/js/search.js"></script>
+
+
+
+        <link rel="stylesheet" type="text/css" media="all" href="hightower/static/styles/jScrollPane.css"/>
+        <link rel="stylesheet" type="text/css" href="hightower/static/styles/selectboxfactory.css"/>
+
+        <script type="text/javascript">var debug = 'false';</script>
+
+
+
+
+        <!-- End of dropdown box-->
+        <script type="text/javascript">
+var searchResultURL = 'getMySearchResult.do';
+var channelURL = 'getMyChannels.do';
+var networkURL='getMyNetwork.do';
+var programURL = 'getMyPrograms.do';
+var searchAssetURL = 'busquedaASSET.do';
+
+var isAdm=0;
+
+isAdm=1;
+    
+
+
+var labelConductor = "Asin:";
+var labelProgram = "";
+var labelChannel = "";
+var labelNetwork = "Brand:";
+var labelTime = "";
+var labelAsset = "id:";
+
+            //--><!]]>
+        </script>
+        <!--<![endif]-->
+    </head>
+
+    <body id="search">
+        <div id="menu">
+            <div class="indent">
+                <img class="logo" src="hightower/static/images/HT_logo.png" alt=""/>
+            </div>
+        </div>
+
+        <!-- Content Start-->
+        <div id="main">
+            <div id="content">
+
+                <div class="container">
+                    <div class="col-1 module1 space1 space1b space1c space1d">
+                        <!--Search PARAMETERS-->
+
+                        <div class="moduleContent modspaceTop modspaceBot modspaceLeft modspaceRight fieldborder">
+                            <h3>Search »</h3>
+                            <label>Keyword(s) or phraseKeyword(s) or phrase<br/>
+                                <input type="text" tabindex="1" style="height:15px; width:440px;"  id="querytext"/></label>
+                            <br/>
+
+                            <div class="container ">
+                                <div class="col-3 space3">
+                                    <h3>Find documents that have:</h3>
+                                    <label>All of these words:<br/>
+                                        <input type="text" tabindex="2" id="querybool" style="height:15px; width:190px; padding-top:0px;"/></label>
+                                    <label>this exact wording or phrase<br/>
+                                        <input type="text" tabindex="3" id="phrasetext" style="height:15px; width:190px; padding-top:0px;"/></label>
+                                    <br/>
+
+                                    <h3>But do not have:</h3>
+                                    <label>Any of these unwanted words<br/>
+                                        <input type="text" tabindex="4" id="nottext" style="height:15px; width:190px; padding-top:0px;"/></label>
+                                </div>
+
+                                <h3>Search specific fields:</h3>
+                                <label>asin<br/>
+                                    <input type="text" tabindex="5" id="programname" style="height:15px; width:190px; padding-top:0px;"/>
+                                </label>
+                                <label>title<br/>
+                                    <input type="text" tabindex="6" id="anchorperson" style="height:15px; width:190px; padding-top:0px;"/>
+                                </label>
+                                <label>description<br/>
+                                    <input type="text" tabindex="7" id="transcript" style="height:15px; width:190px; padding-top:0px;"/>
+                                </label>
+                            </div>
+                            <div class="container space4">
+                                <div class="col-3 space3">
+                                    <h3>Refine results by:</h3>
+                                    <label>Categories<br/></label>
+
+                                    <div id="dropdownVideoType"></div>
+                                    <br/>
+
+                                    <label>Asin<br/></label>
+
+                                    <div id="dropdownChannel"></div>
+                                    <br/>
+
+                                    <label>Brand<br/></label>
+
+                                    <div id="dropdown_dropNetwork"></div>
+                                </div>
+                               
+                                <br/>
+                                <br/>
+
+                                <div style="position:relative; left: 100px; top:20px;">
+                                    <a  id="loadvideo">
+                                        <img align="center" alt="" src="hightower/static/images/searchbtn_ph.png"/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div><div class="col-2 module2 space1b space1c space1d">
+<div class="moduleContent modspaceTop modspaceBot modspaceLeft modspaceRight fieldborder">
+                            <!--Search RESULTS-->
+                     
+                            <h3>Faceted Results »</h3>
+
+
+                            <h2>Results <span id="totResFound1" class="found"></span> Documents</h2>
+
+                            <div class="container">
+                                <div class="resultsSort1" style="float: left;">
+                                 
+                                </div>
+                                <div class="alignright">
+
+                                </div>
+                            </div>
+
+
+                            <!--Results Div. This is the one you dynamically duplicate-->
+                            <div class="holder osX">
+                                <div class="resultlist" id="resultlist1" style="height:500px; overflow:auto;">
+
+
+                                    <!---END OF THE RESULTS LIST.-->
+
+                                </div>
+                            </div>
+                            <!--Search RESULTS End-->
+                       
+                        <!--Results DIV END-->
+                           
+                        </div>
+						</div>
+                        <!--Search PARAMETERS End-->
+                    </div>
+                    <!--Results DIV-->
+                    <div class="col-2 module2 space1b space1c space1d">
+                        <!--Search RESULTS-->
+                        <div class="moduleContent modspaceTop modspaceBot modspaceLeft modspaceRight fieldborder">
+                            <h3>Results »</h3>
+
+
+                            <h2>Results <span id="totResFound" class="found"></span> Documents</h2>
+
+                            <div class="container">
+                                <div class="resultsSort" style="float: left;">
+                                    Sort by: <span class="currentSort">Score</span> <span class="sortLink"><a
+                                            href="#">Date</a></span>
+                                </div>
+                                <div class="alignright">
+
+                                    <div id="Pagination" class="pagination"></div>
+                                </div>
+                            </div>
+
+
+                            <!--Results Div. This is the one you dynamically duplicate-->
+                            <div class="holder osX">
+                                <div class="resultlist" id="resultlist" style="height:500px; overflow:auto;">
+
+
+                                    <!---END OF THE RESULTS LIST.-->
+
+                                </div>
+                            </div>
+                            <!--Search RESULTS End-->
+                        </div>
+                        <!--Results DIV END-->
+                    </div>
+
+                </div>
+            </div>
+            <!-- Content End-->
+            <!--footer -->
+            <div id="footer">
+                <div class="indent">
+                   Couchbase&nbsp;&copy; 2017
+                </div>
+            </div>
+            <div style="z-index: 3000; width: 1110px; height: 205px; opacity: 1;  top: 102px; left: 105px; margin-left: 0px;" id="modalWindow" class="jqmWindow jqmID1">
+                <div id="jqmTitle">
+                    <button class="jqmClose">
+                        X
+                    </button>
+                    <span id="jqmTitleText">Couchbase</span>
+                </div>
+                <iframe id="jqmContent" src=""></iframe>
+            </div>
+            <!--footer end-->
+        </div>
+    </body>
+</html>
+

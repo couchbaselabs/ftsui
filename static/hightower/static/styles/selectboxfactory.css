@@ -1,0 +1,229 @@
+button {
+	color: white;
+	background-color: #feca29;
+	width:150px;
+	font-size:11px;
+	padding:1px;
+	cursor:pointer;
+	border:1px solid black;
+	margin-bottom:5px;
+	font-weight:bold;
+	display:block;
+	text-align:left;
+}
+.toggleText{
+	display:inline;
+}
+.uiSelectBox{
+	background-color:#FEFEFE;
+	border:1px solid #a3a3a3;
+	cursor:pointer;
+	padding:4px;
+	display:none;
+}
+.uiSelectBoxToggle{
+	border:1px solid #a3a3a3;
+	cursor:pointer;
+	height:0px;
+	display:block;
+	height:20px;
+	background: #DBE2F0 url(hightower/static/images/dropdownarrow.gif) no-repeat right center;
+}
+.uiSelectBoxToggleSift{
+	border:1px solid #a3a3a3;
+	cursor:pointer;
+	height:0px;
+	display:block;
+	height:20px;
+	background-color: #DBE2F0;
+}
+.uiSelectBoxToggleDisabled{
+	border:1px solid #a3a3a3;
+	cursor:not-allowed;
+	color:#999999;
+	background-color:#F0F0F0;
+	font-style:italic;
+	display:block;
+}
+.uiSelectBoxDisabled{
+	background-color:#FEFEFE;
+	border:1px solid #999999;
+	padding:0px;
+	cursor:not-allowed;
+}
+.uiSelectBoxStack{
+	display:none;
+	overflow-y:hidden;
+	overflow-x:hidden;
+}
+.uiSelectBoxStackDisabled{
+	overflow-y:hidden;
+	overflow-x:hidden;
+	background-color:#FEFEFE;
+	border:1px solid #999999;
+	cursor:not-allowed;
+}
+.uiSelectBoxChoice{
+	background-color:#EFF3FA;
+	border:1px solid #DDD;
+	border-bottom:2px solid #D0D9E7;
+	color: #333333;
+	padding:2px;
+	padding-left:4px;
+	text-align:left;
+}
+/* classes are set this way for ie6 and mooTools v1.11 */
+.uiSelectBoxChoiceDisabled{
+	background-color:#EFF3FA;
+	border:1px solid #DDD;
+	color: #333333;
+	padding:2px;
+	padding-left:4px;
+	text-align:left;
+}
+.uiSelectBoxChoice.uiSelectBoxChoiceNormal{
+	background-color:#EFF3FA;
+	border:1px solid #DDD;
+	border-bottom:2px solid #D0D9E7;
+	color: #333333;
+	padding:2px;
+	padding-left:4px;
+	text-align:left;
+}
+/* This is the select box hover change text  color*/
+.uiSelectBoxChoice.uiSelectBoxChoiceActive{
+	background-color: #feca29;
+	border:1px solid #feca29;
+	border-bottom: 2px solid #feca29;
+	color: #333333;
+	padding:2px;
+	padding-left:4px;
+	text-align:left;
+}
+.uiSelectBoxChoice.uiSelectBoxChoiceGraze{	
+	background-color:#869AF9;
+	border:1px solid #666666;
+	border-bottom: 2px solid #666666;
+	color: #CCCCCC;
+	padding:2px;
+	padding-left:4px;
+	text-align:left;
+}
+.uiSelectBoxChoice.uiSelectBoxChoiceSelected{
+	background-color:#666666;
+	border:1px solid #666666;
+	border-bottom: 2px solid #666666;
+	color: #CCCCCC;
+	padding:2px;
+	padding-left:4px;
+	text-align:left;
+}
+.uiSelectBoxChoice.uiSelectBoxChoiceSelected a{
+	color:white
+}
+.uiSelectBoxChoice.uiSelectBoxChoiceDisabled{
+	background-color:#F0F0F0;
+	border:1px solid #CCCCCC;
+	color: #CCCCCC;
+	padding:2px;
+	padding-left:4px !important;
+	text-align:left;
+}
+/* Sort Text Color    */
+.selectUpdate{
+	color: #cccccc;
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	display:inline;
+}
+.infoBar{
+	color: #000;
+	margin-top:1px;
+}
+.focusBox{
+	position:absolute;
+	width:0px;
+	height:0px;
+	border:0px;
+	display:none;
+}
+.graphIcon{
+	margin-top:1px;
+	margin-right:2px;
+	cursor:pointer;
+	display:inline;
+}
+.sortFlip{
+	cursor:pointer;
+	display:inline;
+	margin-right:3px;
+}
+.siftBox{
+	padding-left:1px;
+	font-size:10px;
+	font-family:arial;
+	margin-top:1px;
+}
+.statesHeader{
+	display:inline;
+}
+.statesHeaderItem{ /* about 20 px would be the max on any normal sized dropdown */
+	width:12px;
+	margin-left:2px;
+	margin-right:1px;
+	height:18px;
+	display:inline;
+}
+.statesHeaderItem.pushedHeaderItem{ /* looks better in ff */
+	border: 2px inset darkblue;
+}
+.statesHeaderItem.unPushedHeaderItem{ /* looks better in ff  */
+	border: 2px outset darkblue;
+}
+.link{
+}
+
+/* graph css */
+
+.vertgraph {
+	display: none;
+	width: 378px;
+	height: 207px;
+	background: url("hightower/static/images/h_backbar.gif") no-repeat;
+}
+.vertgraph ul {
+	width: 378px;
+	height: 207px;
+	margin: 0;
+	padding: 0;
+}
+.vertgraph ul li {
+	position: absolute;
+	width: 28px;
+	height: 160px;
+	bottom: 34px;
+	padding: 0 !important;
+	margin: 0 !important;
+	background: url("hightower/static/images/g_colorbar3.jpg") no-repeat !important;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	line-height: 2.5em;
+	list-style-type:none;
+	cursor:help;
+}
+.vertgraph span{
+	cursor:help;
+}
+.vertgraph li.state_1 { left: 24px; max-height:164px; background-position: 0px bottom !important; }
+.vertgraph li.state_2 { left: 101px; max-height:164px; background-position: -28px bottom !important; }
+.vertgraph li.state_3 { left: 176px; max-height:164px; background-position: -56px bottom !important; }
+.vertgraph li.state_4 { left: 251px; max-height:164px; background-position: -84px bottom !important; }
+.vertgraph li.state_5 { left: 327px; max-height:164px; background-position: -112px bottom !important; }
+.vertgraph span.state_1_label { position: absolute; color: white; font-weight:bold; left: 6px; bottom:7px !important; }
+.vertgraph span.state_2_label { position: absolute; color: white; font-weight:bold; left: 84px; bottom:7px !important; }
+.vertgraph span.state_3_label { position: absolute; color: white; font-weight:bold; left: 158px; bottom:7px !important; }
+.vertgraph span.state_4_label { position: absolute; color: white; font-weight:bold; left: 233px; bottom:7px !important; }
+.vertgraph span.state_5_label { position: absolute; color: white; font-weight:bold; left: 309px; bottom:7px !important; }
+
+
