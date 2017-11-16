@@ -1,0 +1,146 @@
+
+
+{
+ "name": "engageIT",
+ "type": "fulltext-index",
+ "params": {
+  "doc_config": {
+   "mode": "type_field",
+   "type_field": "type"
+  },
+  "mapping": {
+   "default_analyzer": "standard",
+   "default_datetime_parser": "dateTimeOptional",
+   "default_field": "_all",
+   "default_mapping": {
+    "dynamic": true,
+    "enabled": false
+   },
+   "default_type": "_default",
+   "index_dynamic": true,
+   "store_dynamic": false,
+   "types": {
+    "product": {
+     "dynamic": false,
+     "enabled": true,
+     "properties": {
+      "reviews": {
+       "dynamic": false,
+       "enabled": true,
+       "properties": {
+        "review": {
+         "dynamic": false,
+         "enabled": true,
+         "properties": {
+          "reviewerName": {
+           "enabled": true,
+           "dynamic": false,
+           "fields": [
+            {
+             "analyzer": "",
+             "include_in_all": true,
+             "include_term_vectors": true,
+             "index": true,
+             "name": "reviewerName",
+             "store": true,
+             "type": "text"
+            }
+           ]
+          }
+         }
+        }
+       }
+      },
+      "asin": {
+       "enabled": true,
+       "dynamic": false,
+       "fields": [
+        {
+         "analyzer": "",
+         "include_in_all": true,
+         "include_term_vectors": true,
+         "index": true,
+         "name": "asin",
+         "store": true,
+         "type": "text"
+        }
+       ]
+      },
+      "brand": {
+       "enabled": true,
+       "dynamic": false,
+       "fields": [
+        {
+         "analyzer": "",
+         "include_in_all": true,
+         "include_term_vectors": true,
+         "index": true,
+         "name": "brand",
+         "store": true,
+         "type": "text"
+        }
+       ]
+      },
+      "description": {
+       "enabled": true,
+       "dynamic": false,
+       "fields": [
+        {
+         "analyzer": "",
+         "include_in_all": true,
+         "include_term_vectors": true,
+         "index": true,
+         "name": "description",
+         "store": true,
+         "type": "text"
+        }
+       ]
+      },
+      "price": {
+       "enabled": true,
+       "dynamic": false,
+       "fields": [
+        {
+         "analyzer": "",
+         "include_in_all": true,
+         "include_term_vectors": true,
+         "index": true,
+         "name": "price",
+         "store": true,
+         "type": "number"
+        }
+       ]
+      },
+      "title": {
+       "enabled": true,
+       "dynamic": false,
+       "fields": [
+        {
+         "analyzer": "",
+         "include_in_all": true,
+         "include_term_vectors": true,
+         "index": true,
+         "name": "title",
+         "store": true,
+         "type": "text"
+        }
+       ]
+      }
+     }
+    }
+   }
+  },
+  "store": {
+   "kvStoreName": "mossStore"
+  }
+ },
+ "sourceType": "couchbase",
+ "sourceName": "products",
+ "sourceUUID": "d5ed19e644ac0fcf565f0740df9bc8b2",
+ "sourceParams": {},
+ "planParams": {
+  "maxPartitionsPerPIndex": 171,
+  "numReplicas": 0
+ },
+ "uuid": "698a85b43e411b39"
+}
